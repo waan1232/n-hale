@@ -14,6 +14,11 @@
     <meta property="og:description" content="Crafting scalable, zero-friction digital experiences for local businesses and startups.">
     <meta property="og:image" content="https://nathanhale.me/og-image.png">
 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nathan Hale | Web Designer & Digital Strategist">
+    <meta name="twitter:description" content="Crafting scalable, zero-friction digital experiences for local businesses and startups.">
+    <meta name="twitter:image" content="https://nathanhale.me/og-image.png">
+
     <link rel="icon" type="image/png" href="favicon.png">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-13880100395"></script>
@@ -30,6 +35,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <nav class="site-nav" id="site-nav" aria-label="Site navigation">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">NH.</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Work</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#consultation">Contact</a>
+            </div>
+        </div>
+    </nav>
 
     <header class="hero">
         <div class="container">
@@ -58,17 +75,17 @@
 
         <hr class="divider container">
         
-        <section id="testimonials" class="section container">
+        <section id="testimonials" class="section container fade-in">
             <h2 class="section-title">Client Feedback</h2>
-            
+
             <div class="grid-2">
                 <div class="highlight-card">
-                    <p class="about-text" style="font-style: italic;">"Nathan completely modernized our digital presence. The new platform streamlined our inquiries and gave our local brand a highly professional aesthetic."</p>
+                    <p class="about-text">"Nathan completely modernized our digital presence. The new platform streamlined our inquiries and gave our local brand a highly professional aesthetic."</p>
                     <h3>— Rosa, Rosa Alteration</h3>
                 </div>
-                
+
                 <div class="highlight-card">
-                    <p class="about-text" style="font-style: italic;">"The site is incredibly fast, looks fantastic on mobile, and completely removes the friction for our customers trying to find our services."</p>
+                    <p class="about-text">"The site is incredibly fast, looks fantastic on mobile, and completely removes the friction for our customers trying to find our services."</p>
                     <h3>— Cindy, Cindy's Barbershop</h3>
                 </div>
             </div>
@@ -76,45 +93,45 @@
 
         <hr class="divider container">
         
-        <section id="projects" class="section container">
+        <section id="projects" class="section container fade-in">
             <h2 class="section-title">Selected Projects</h2>
             <p class="section-description">Recent deployments focused on clean UI and scalable web architecture.</p>
-            
+
             <div class="portfolio-grid">
-                
+
                 <div class="portfolio-card">
                     <img src="campusshare.png" alt="CampusShare Live Preview" class="project-image">
                     <div class="card-content">
                         <h3>CampusShare <span class="badge">Founder</span></h3>
                         <p>Designed and deployed a peer-to-peer rental marketplace. Developed the MVP and UI architecture to segment listings by institution using secure domain authentication.</p>
-                        <a href="http://campusshareapp.com" target="_blank" class="project-link">Visit live site &rarr;</a>
+                        <a href="http://campusshareapp.com" target="_blank" rel="noopener noreferrer" class="project-link">Visit live site &rarr;</a>
                     </div>
                 </div>
 
                 <div class="portfolio-card">
-                    <img src="rosatailor.png" alt="Rosa Alteration Live Preview" class="project-image">
+                    <img src="rosatailor.png" alt="Rosa Alteration Live Preview" class="project-image" loading="lazy">
                     <div class="card-content">
                         <h3>Rosa Alteration</h3>
                         <p>A refined digital storefront built to enhance online visibility and streamline customer inquiries for a boutique tailoring business.</p>
-                        <a href="https://rosa-alteration.onrender.com" target="_blank" class="project-link">Visit live site &rarr;</a>
+                        <a href="https://rosa-alteration.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">Visit live site &rarr;</a>
                     </div>
                 </div>
 
                 <div class="portfolio-card">
-                    <img src="cindybarber.png" alt="Cindy's Barbershop Live Preview" class="project-image">
+                    <img src="cindybarber.png" alt="Cindy's Barbershop Live Preview" class="project-image" loading="lazy">
                     <div class="card-content">
                         <h3>Cindy's Barbershop</h3>
                         <p>A clean, service-oriented web presence designed to showcase services, integrate booking flows, and establish a modern brand identity.</p>
-                        <a href="https://cindy-barbershop.onrender.com" target="_blank" class="project-link">Visit live site &rarr;</a>
+                        <a href="https://cindy-barbershop.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">Visit live site &rarr;</a>
                     </div>
                 </div>
 
                 <div class="portfolio-card">
-                    <img src="twojays.png" alt="Two J's Live Preview" class="project-image">
+                    <img src="twojays.png" alt="Two J's Live Preview" class="project-image" loading="lazy">
                     <div class="card-content">
                         <h3>Two J's</h3>
                         <p>A scalable static-site framework deployed for local retail, focusing on fast load times, mobile responsiveness, and high-converting UI.</p>
-                        <a href="https://two-j-s-s.onrender.com" target="_blank" class="project-link">Visit live site &rarr;</a>
+                        <a href="https://two-j-s-s.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">Visit live site &rarr;</a>
                     </div>
                 </div>
 
@@ -123,7 +140,7 @@
 
         <hr class="divider container">
 
-        <section id="pricing" class="section container">
+        <section id="pricing" class="section container fade-in">
             <h2 class="section-title">Investment</h2>
             <p class="section-description">Transparent pricing for scalable digital infrastructure. Choose the model that fits your cash flow.</p>
             
@@ -140,7 +157,7 @@
                         <li>Ongoing Hosting & Infrastructure</li>
                         <li>Basic Monthly Updates</li>
                     </ul>
-                    <a href="https://buy.stripe.com/6oU8wOabW3Y06IafYbbII01" target="_blank" class="btn btn-outline full-width-btn">Get Started</a>
+                    <a href="https://buy.stripe.com/6oU8wOabW3Y06IafYbbII01" target="_blank" rel="noopener noreferrer" class="btn btn-outline full-width-btn">Get Started</a>
                 </div>
 
                 <div class="pricing-card highlight-pricing">
@@ -155,7 +172,7 @@
                         <li>Content & Image Updates Included</li>
                         <li>Scalable Framework</li>
                     </ul>
-                    <a href="https://buy.stripe.com/fZuaEW0Bm524d6y8vJbII00" target="_blank" class="btn full-width-btn">Subscribe Now</a>
+                    <a href="https://buy.stripe.com/fZuaEW0Bm524d6y8vJbII00" target="_blank" rel="noopener noreferrer" class="btn full-width-btn">Subscribe Now</a>
                 </div>
 
             </div>
@@ -183,36 +200,44 @@
                             <label for="message">Project Details & Goals</label>
                             <textarea id="message" name="message" rows="5" required placeholder="Tell me about your current website and what you're looking to build..."></textarea>
                         </div>
-                        <button type="submit" class="btn consultation-btn">Send Request &rarr;</button>
+                        <button type="submit" id="submit-btn" class="btn consultation-btn">Send Request &rarr;</button>
                         <p id="form-status" style="display: none; font-size: 0.9rem; margin-top: 1rem;"></p>
                     </form>
 
                     <script>
                         var form = document.getElementById("consultation-form");
-                        
+                        var submitBtn = document.getElementById("submit-btn");
+
                         form.addEventListener("submit", function(event) {
-                            event.preventDefault(); // Intercepts the submit to prevent Formspree from opening a new page
-                            
+                            event.preventDefault();
+
+                            submitBtn.textContent = "Sending...";
+                            submitBtn.disabled = true;
+
                             var data = new FormData(form);
-                            
+
                             fetch(form.action, {
                                 method: form.method,
                                 body: data,
-                                headers: {
-                                    'Accept': 'application/json'
-                                }
-                            }).then(response => {
+                                headers: { 'Accept': 'application/json' }
+                            }).then(function(response) {
                                 if (response.ok) {
-                                    window.location.href = "https://nathanhale.me/thanks.html";
+                                    window.location.href = "./thanks.html";
                                 } else {
-                                    document.getElementById("form-status").innerHTML = "Oops! There was a problem sending your request.";
-                                    document.getElementById("form-status").style.display = "block";
-                                    document.getElementById("form-status").style.color = "red";
+                                    var status = document.getElementById("form-status");
+                                    status.textContent = "Oops! There was a problem sending your request. Please try again.";
+                                    status.style.display = "block";
+                                    status.style.color = "#c0392b";
+                                    submitBtn.textContent = "Send Request \u2192";
+                                    submitBtn.disabled = false;
                                 }
-                            }).catch(error => {
-                                document.getElementById("form-status").innerHTML = "Oops! There was a network error.";
-                                document.getElementById("form-status").style.display = "block";
-                                document.getElementById("form-status").style.color = "red";
+                            }).catch(function() {
+                                var status = document.getElementById("form-status");
+                                status.textContent = "Oops! There was a network error. Please check your connection.";
+                                status.style.display = "block";
+                                status.style.color = "#c0392b";
+                                submitBtn.textContent = "Send Request \u2192";
+                                submitBtn.disabled = false;
                             });
                         });
                     </script>
@@ -228,11 +253,48 @@
             <div class="footer-contact">
                 <a href="mailto:n.hale@bowdoin.edu">n.hale@bowdoin.edu</a> | 
                 <a href="tel:6165607270">(616) 560-7270</a> | 
-                <a href="https://www.linkedin.com/in/nathanstormhale/" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/nathanstormhale/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
             <p class="copyright">&copy; 2026 Nathan Hale. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Mark JS as loaded so fade-in CSS activates
+        document.body.classList.add('js-loaded');
+
+        // Sticky nav: show after scrolling past half of hero
+        var siteNav = document.getElementById('site-nav');
+        var hero = document.querySelector('.hero');
+
+        function handleNavScroll() {
+            if (window.scrollY > hero.offsetHeight * 0.4) {
+                siteNav.classList.add('visible');
+            } else {
+                siteNav.classList.remove('visible');
+            }
+        }
+
+        window.addEventListener('scroll', handleNavScroll, { passive: true });
+
+        // Scroll-triggered fade-in for sections
+        var fadeEls = document.querySelectorAll('.fade-in');
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            fadeEls.forEach(function(el) { observer.observe(el); });
+        } else {
+            // Fallback: show all immediately
+            fadeEls.forEach(function(el) { el.classList.add('visible'); });
+        }
+    </script>
 
 </body>
 </html>
