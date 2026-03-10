@@ -182,33 +182,41 @@ a:hover {
     border-color: var(--accent-gold);
 }
 
-/* Project Images */
-.project-image {
+/* Iframe Live Previews */
+.iframe-wrapper {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 250px; /* Height of the preview area */
+    overflow: hidden;
+    position: relative;
     border-bottom: 1px solid var(--border-color);
-    transition: transform 0.5s ease;
+    background-color: #f4f4f4; /* Placeholder color while loading */
 }
 
-.portfolio-card:hover .project-image {
-    transform: scale(1.03);
+.iframe-wrapper iframe {
+    /* Force a desktop-sized viewport */
+    width: 1200px;
+    height: 800px;
+    
+    /* Scale it down to fit inside the wrapper */
+    transform: scale(0.333);
+    transform-origin: top left;
+    
+    border: none;
+    
+    /* Prevents users from accidentally interacting with the mini-site while scrolling */
+    pointer-events: none; 
+}
+
+/* Hover effect for the whole card to make the iframe 'pop' slightly */
+.portfolio-card:hover .iframe-wrapper iframe {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
 .card-content {
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-}
-
-.card-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.card-content p {
-    margin-bottom: 2rem;
     flex-grow: 1;
 }
 
