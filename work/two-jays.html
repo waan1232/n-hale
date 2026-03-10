@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two J's &mdash; Nathan Hale</title>
+    <meta name="description" content="Case study: Two J's retail static site, designed and built by Nathan Hale.">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="site-nav visible" id="site-nav" aria-label="Site navigation">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">NH.</a>
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects">Work</a>
+                <a href="../index.html#pricing">Pricing</a>
+                <a href="../index.html#consultation">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="case-hero container">
+            <a href="../index.html#projects" class="case-back">&larr; Back to work</a>
+            <div class="case-meta">
+                <div class="project-tags">
+                    <span class="tag">Retail</span>
+                    <span class="tag">Static Site</span>
+                    <span class="tag">Performance</span>
+                </div>
+            </div>
+            <h1>Two J's</h1>
+            <p>A high-performance static site for a local retail business — engineered for fast load times, mobile-first experience, and a clean UI that converts.</p>
+        </section>
+
+        <div class="container">
+            <img src="../twojays.png" alt="Two J's website preview" class="case-image" loading="lazy">
+        </div>
+
+        <div class="container">
+            <div class="case-body">
+                <span class="case-label">Challenge</span>
+                <div class="case-content">
+                    <h2>A local retail business losing customers to a slow, outdated site.</h2>
+                    <p>Two J's needed a web presence that could keep pace with the expectations of modern shoppers — fast, mobile-friendly, and visually credible. Slow load times and poor mobile experience were creating drop-off before customers even saw the product offering.</p>
+                    <p>The brief was clear: build something fast, clean, and easy to maintain long-term without heavy infrastructure.</p>
+                </div>
+            </div>
+
+            <div class="case-body">
+                <span class="case-label">Approach</span>
+                <div class="case-content">
+                    <h2>Static-first architecture for maximum performance.</h2>
+                    <p>The technical decision to go static was deliberate. No unnecessary server-side rendering, no bloated frameworks — just clean HTML, CSS, and minimal JavaScript deployed to a fast CDN. The result is near-instant load times regardless of device or connection quality.</p>
+                    <p>Design-wise, the focus was conversion: clear product presentation, scannable layout, and prominent calls-to-action. Mobile was designed first, then scaled up — not the other way around.</p>
+                </div>
+            </div>
+
+            <div class="case-body">
+                <span class="case-label">Outcome</span>
+                <div class="case-content">
+                    <h2>Fast, scalable, and easy to maintain.</h2>
+                    <p>Two J's now operates on a lean, high-performance web infrastructure with a site that loads fast on any device. The static architecture keeps ongoing costs minimal and the codebase easy to update as the business evolves.</p>
+                </div>
+            </div>
+
+            <div class="case-cta">
+                <a href="https://two-j-s-s.onrender.com" target="_blank" rel="noopener noreferrer" class="btn">Visit live site &rarr;</a>
+                <a href="../index.html#projects" class="btn btn-outline">Back to work</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <h2>Let's build something.</h2>
+            <div class="footer-contact">
+                <a href="mailto:n.hale@bowdoin.edu">n.hale@bowdoin.edu</a> |
+                <a href="tel:6165607270">(616) 560-7270</a> |
+                <a href="https://www.linkedin.com/in/nathanstormhale/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+            <p class="copyright">&copy; 2026 Nathan Hale. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var scrollProgress = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', function() {
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            scrollProgress.style.width = (docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0) + '%';
+        }, { passive: true });
+    </script>
+
+</body>
+</html>

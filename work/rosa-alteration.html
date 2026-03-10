@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosa Alteration &mdash; Nathan Hale</title>
+    <meta name="description" content="Case study: Rosa Alteration digital storefront, designed and built by Nathan Hale.">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="site-nav visible" id="site-nav" aria-label="Site navigation">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">NH.</a>
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects">Work</a>
+                <a href="../index.html#pricing">Pricing</a>
+                <a href="../index.html#consultation">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="case-hero container">
+            <a href="../index.html#projects" class="case-back">&larr; Back to work</a>
+            <div class="case-meta">
+                <div class="project-tags">
+                    <span class="tag">Local Business</span>
+                    <span class="tag">Storefront</span>
+                </div>
+            </div>
+            <h1>Rosa Alteration</h1>
+            <p>A professional digital storefront for a boutique tailoring business — built to establish online credibility and convert web visitors into inquiries.</p>
+        </section>
+
+        <div class="container">
+            <img src="../rosatailor.png" alt="Rosa Alteration website preview" class="case-image" loading="lazy">
+        </div>
+
+        <div class="container">
+            <div class="case-body">
+                <span class="case-label">Challenge</span>
+                <div class="case-content">
+                    <h2>A skilled tailor with no web presence to speak of.</h2>
+                    <p>Rosa Alteration had a loyal local customer base built entirely through word of mouth, but no website — making it invisible to the large segment of customers who search online before choosing a service provider. Without a professional web presence, potential clients had no way to assess quality, understand services, or make contact easily.</p>
+                </div>
+            </div>
+
+            <div class="case-body">
+                <span class="case-label">Approach</span>
+                <div class="case-content">
+                    <h2>Clean, professional design that reflects the craft.</h2>
+                    <p>The design language was intentionally refined — reflecting the precision and attention to detail that defines quality tailoring. Typography was kept elegant, photography was front and center, and the service structure was laid out with clarity so visitors could quickly understand offerings and pricing.</p>
+                    <p>The inquiry flow was kept frictionless: a single, prominent contact form with minimal required fields. The goal was to make reaching out feel effortless.</p>
+                </div>
+            </div>
+
+            <div class="case-body">
+                <span class="case-label">Outcome</span>
+                <div class="case-content">
+                    <h2>A professional web presence that earns trust on first visit.</h2>
+                    <p>Rosa Alteration now has a live site that presents the business with the professionalism it deserves. New customers arriving from search or referral immediately encounter a credible, visually polished brand that converts browsers into inquiries.</p>
+                </div>
+            </div>
+
+            <div class="case-cta">
+                <a href="https://rosa-alteration.onrender.com" target="_blank" rel="noopener noreferrer" class="btn">Visit live site &rarr;</a>
+                <a href="../index.html#projects" class="btn btn-outline">Back to work</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <h2>Let's build something.</h2>
+            <div class="footer-contact">
+                <a href="mailto:n.hale@bowdoin.edu">n.hale@bowdoin.edu</a> |
+                <a href="tel:6165607270">(616) 560-7270</a> |
+                <a href="https://www.linkedin.com/in/nathanstormhale/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+            <p class="copyright">&copy; 2026 Nathan Hale. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var scrollProgress = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', function() {
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            scrollProgress.style.width = (docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0) + '%';
+        }, { passive: true });
+    </script>
+
+</body>
+</html>
