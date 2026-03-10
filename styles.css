@@ -183,12 +183,22 @@ a:hover {
 }
 
 /* Project Images - Applied to all project previews now */
+/* Project Images - Updated to prevent aggressive cropping */
 .project-image {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    object-fit: cover;         /* Keeps the box filled */
+    object-position: top;      /* Anchors the image to the top so the hero section of your site is always visible */
     border-bottom: 1px solid var(--border-color);
     transition: transform 0.5s ease;
+    background-color: #f9f9f9;
+}
+
+/* If you want absolutely ZERO cropping and want to see the whole image, 
+   change 'object-fit: cover;' above to 'object-fit: contain;' */
+
+.portfolio-card:hover .project-image {
+    transform: scale(1.03);
 }
 
 .portfolio-card:hover .project-image {
@@ -413,4 +423,57 @@ footer h2 {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
+}
+/* --- Consultation Form Styles --- */
+.consultation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0; /* Keeps the sharp, minimalist aesthetic */
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder, 
+.form-group textarea::placeholder {
+    color: #a0a0a0;
+    font-weight: 300;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+.consultation-btn {
+    align-self: flex-start;
+    margin-top: 0.5rem;
 }
