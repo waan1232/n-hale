@@ -31,7 +31,7 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -59,20 +59,14 @@ a:hover {
     color: var(--accent-gold);
 }
 
-.accent {
-    color: var(--accent-gold);
-    font-style: italic;
-    font-weight: 400;
-}
-
 /* Hero Section */
 .hero {
-    padding: 8rem 0 4rem;
+    padding: 8rem 0 6rem;
     text-align: left;
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 4.5rem;
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
 }
@@ -82,8 +76,9 @@ a:hover {
     color: var(--accent-slate);
     font-family: var(--font-sans);
     font-weight: 300;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     max-width: 800px;
+    line-height: 1.4;
 }
 
 .hero-links {
@@ -94,7 +89,7 @@ a:hover {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 0.85rem 1.75rem;
     background: var(--text-primary);
     color: var(--bg-color);
     border: 1px solid var(--text-primary);
@@ -125,12 +120,12 @@ a:hover {
 
 /* Layout & Sections */
 .section {
-    padding: 4rem 0;
+    padding: 5rem 0;
 }
 
 .section-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
 }
@@ -146,69 +141,75 @@ a:hover {
 }
 
 .section-description {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     font-size: 1.1rem;
     max-width: 600px;
 }
 
-/* --- CAROUSEL STYLES --- */
-.carousel-container {
-    width: 100%;
-    padding: 1rem 0 2rem 0;
+/* About Grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
 }
 
-.carousel-track {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 2rem;
-    padding: 0 2rem; /* Matches container padding */
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+.about-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
 
-.carousel-track::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
 }
 
-.carousel-slide {
-    flex: 0 0 80%; /* Shows a peek of the next card on mobile/desktop */
-    max-width: 400px;
-    scroll-snap-align: center;
-}
-
-@media (min-width: 768px) {
-    .carousel-slide {
-        flex: 0 0 45%;
-        scroll-snap-align: start;
-    }
-}
-
-/* Portfolio Cards inside Carousel */
 .portfolio-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 2.5rem 2rem;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
 }
 
 .portfolio-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
     border-color: var(--accent-gold);
 }
 
-.portfolio-card h3 {
-    font-size: 1.4rem;
+/* Project Images */
+.project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .project-image {
+    transform: scale(1.03);
+}
+
+.card-content {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.portfolio-card p {
+.card-content p {
     margin-bottom: 2rem;
+    flex-grow: 1;
 }
 
 .project-link {
@@ -217,43 +218,31 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--text-primary);
+    display: inline-flex;
+    align-items: center;
     margin-top: auto;
 }
 
+.project-link:hover {
+    color: var(--accent-gold);
+    padding-left: 5px;
+}
+
 .highlight-border {
-    border-top: 3px solid var(--accent-gold);
+    border-top: 4px solid var(--accent-gold);
 }
 
 .badge {
     background: var(--accent-slate);
     color: white;
     font-size: 0.7rem;
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 20px;
     vertical-align: middle;
     margin-left: 0.5rem;
     font-family: var(--font-sans);
     text-transform: uppercase;
     font-weight: normal;
-}
-
-/* Secondary Grids */
-.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.highlight-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 2rem;
-}
-
-.highlight-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: var(--accent-gold);
 }
 
 /* Divider */
@@ -264,64 +253,18 @@ a:hover {
     margin: 0 auto;
 }
 
-/* Resume/Background Items */
-.resume-item {
-    margin-bottom: 2.5rem;
-}
-
-.resume-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.resume-header h3 {
-    font-size: 1.2rem;
-}
-
-.resume-header .date {
-    font-size: 0.85rem;
-    color: var(--accent-slate);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.resume-item ul {
-    list-style-position: inside;
-    padding-left: 0;
-    margin-top: 0.5rem;
-}
-
-.resume-item ul li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.resume-item ul li::before {
-    content: "•";
-    color: var(--accent-gold);
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
-    position: absolute;
-    left: 0;
-}
-
 /* Footer */
 footer {
     background-color: #fafafa;
     border-top: 1px solid var(--border-color);
-    padding: 4rem 0;
+    padding: 5rem 0;
     text-align: center;
     margin-top: 2rem;
 }
 
 footer h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .footer-contact {
@@ -330,11 +273,13 @@ footer h2 {
 
 .footer-contact a {
     margin: 0 0.5rem;
+    font-size: 1.1rem;
 }
 
 .copyright {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--accent-slate);
+    margin-top: 2rem;
 }
 
 /* Mobile Responsiveness */
@@ -351,15 +296,12 @@ footer h2 {
         font-size: 1.2rem;
     }
     
-    .grid-2 {
+    .about-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
-    .resume-header {
-        flex-direction: column;
-    }
-    
-    .resume-header .date {
-        margin-top: 0.25rem;
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 }
