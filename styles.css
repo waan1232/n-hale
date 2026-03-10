@@ -6,6 +6,7 @@
     --accent-gold: #c5a059;
     --accent-slate: #708090;
     --border-color: #eaeaea;
+    --card-bg: #fdfdfd;
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
 }
@@ -94,9 +95,9 @@ a:hover {
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
+    background: var(--text-primary);
+    color: var(--bg-color);
     border: 1px solid var(--text-primary);
-    background: transparent;
-    color: var(--text-primary);
     font-family: var(--font-sans);
     font-weight: 500;
     font-size: 0.9rem;
@@ -107,10 +108,19 @@ a:hover {
 }
 
 .btn:hover {
+    background: transparent;
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+}
+
+.btn-outline:hover {
     background: var(--text-primary);
     color: var(--bg-color);
-    border-color: var(--text-primary);
-    transform: translateY(-2px);
 }
 
 /* Layout & Grid */
@@ -120,7 +130,7 @@ a:hover {
 
 .section-title {
     font-size: 2rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     position: relative;
     display: inline-block;
 }
@@ -135,6 +145,79 @@ a:hover {
     background-color: var(--accent-gold);
 }
 
+.section-description {
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+/* Portfolio Grid specific to Web Designer aesthetic */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+    border-color: var(--accent-gold);
+}
+
+.portfolio-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-card p {
+    margin-bottom: 1.5rem;
+}
+
+.project-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    display: inline-flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.project-link:hover {
+    color: var(--accent-gold);
+    padding-left: 5px; /* Subtle slide effect */
+}
+
+.highlight-border {
+    border-top: 3px solid var(--accent-gold);
+}
+
+.badge {
+    background: var(--accent-slate);
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+}
+
+/* Secondary Grids */
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -142,25 +225,15 @@ a:hover {
 }
 
 .highlight-card {
-    background: #fdfdfd;
+    background: var(--card-bg);
     border: 1px solid var(--border-color);
     padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.highlight-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 
 .highlight-card h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     color: var(--accent-gold);
-}
-
-.full-width {
-    grid-column: 1 / -1;
 }
 
 /* Divider */
@@ -262,7 +335,7 @@ footer h2 {
         font-size: 1.2rem;
     }
     
-    .grid-2 {
+    .portfolio-grid, .grid-2 {
         grid-template-columns: 1fr;
     }
     
