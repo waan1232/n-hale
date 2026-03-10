@@ -123,7 +123,7 @@ a:hover {
     color: var(--bg-color);
 }
 
-/* Layout & Grid */
+/* Layout & Sections */
 .section {
     padding: 4rem 0;
 }
@@ -151,23 +151,49 @@ a:hover {
     max-width: 600px;
 }
 
-/* Portfolio Grid specific to Web Designer aesthetic */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+/* --- CAROUSEL STYLES --- */
+.carousel-container {
+    width: 100%;
+    padding: 1rem 0 2rem 0;
 }
 
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 0 2rem; /* Matches container padding */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.carousel-slide {
+    flex: 0 0 80%; /* Shows a peek of the next card on mobile/desktop */
+    max-width: 400px;
+    scroll-snap-align: center;
+}
+
+@media (min-width: 768px) {
+    .carousel-slide {
+        flex: 0 0 45%;
+        scroll-snap-align: start;
+    }
+}
+
+/* Portfolio Cards inside Carousel */
 .portfolio-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     padding: 2.5rem 2rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    position: relative;
-    overflow: hidden;
 }
 
 .portfolio-card:hover {
@@ -182,7 +208,7 @@ a:hover {
 }
 
 .portfolio-card p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .project-link {
@@ -191,14 +217,7 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--text-primary);
-    display: inline-flex;
-    align-items: center;
     margin-top: auto;
-}
-
-.project-link:hover {
-    color: var(--accent-gold);
-    padding-left: 5px; /* Subtle slide effect */
 }
 
 .highlight-border {
@@ -215,6 +234,7 @@ a:hover {
     margin-left: 0.5rem;
     font-family: var(--font-sans);
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 /* Secondary Grids */
@@ -241,10 +261,10 @@ a:hover {
     border: 0;
     height: 1px;
     background: var(--border-color);
-    margin: 0;
+    margin: 0 auto;
 }
 
-/* Resume Items */
+/* Resume/Background Items */
 .resume-item {
     margin-bottom: 2.5rem;
 }
@@ -266,10 +286,6 @@ a:hover {
     color: var(--accent-slate);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-}
-
-.resume-item p {
-    margin-bottom: 0.5rem;
 }
 
 .resume-item ul {
@@ -335,7 +351,7 @@ footer h2 {
         font-size: 1.2rem;
     }
     
-    .portfolio-grid, .grid-2 {
+    .grid-2 {
         grid-template-columns: 1fr;
     }
     
