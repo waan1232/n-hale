@@ -1,39 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathan Hale | Web Designer & Digital Strategist</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <header class="hero">
-        <div class="container">
-            <h1 class="hero-title">Nathan Hale.</h1>
-            <h2 class="hero-subtitle">Crafting scalable, zero-friction digital experiences for local businesses and startups.</h2>
-            <div class="hero-links">
-                <a href="#projects" class="btn">View Work</a>
-                <a href="#consultation" class="btn btn-outline">Request Consultation</a>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        
-        <section id="about" class="section container fade-in">
-            <div class="about-grid">
-                <div>
-                    <h2 class="section-title">About Me</h2>
-                </div>
-                <div>
-                    <p class="about-text">I don't just design websites that look good; I build digital infrastructure engineered for growth. As the founder of CampusShare and a digital strategist who has scaled audiences to over 30,000 followers and 1.4 million likes, I understand what drives user engagement.</p>
-                    <p class="about-text">My approach blends clean, minimalist UI with fast, scalable architecture. Whether it's a booking platform for a local barbershop or a secure peer-to-peer marketplace, I focus on building high-conversion, intuitive platforms that remove friction between businesses and their customers.</p>
-                </div>
-            </div>
         </section>
 
         <hr class="divider container">
@@ -129,11 +93,26 @@
             <div class="about-grid">
                 <div>
                     <h2 class="section-title">Consultation</h2>
+                    <p class="about-text">Ready to overhaul your digital infrastructure or launch a new scalable platform? Fill out the form to initiate a conversation about your project goals and current web presence.</p>
                 </div>
                 <div>
-                    <p class="about-text">Ready to overhaul your digital infrastructure or launch a new scalable platform? I am available for consultations to analyze your current web presence and construct a high-conversion strategy customized to your business goals.</p>
-                    <p class="about-text">Send an email with your project details to initiate a conversation.</p>
-                    <a href="mailto:n.hale@bowdoin.edu?subject=Consultation Request - Nathan Hale Design" class="btn consultation-btn">Send Consultation Request &rarr;</a>
+                    <form action="https://formspree.io/f/YOUR_ENDPOINT_HERE" method="POST" class="consultation-form">
+                        <div class="form-group">
+                            <label for="name">Name / Business Name</label>
+                            <input type="text" id="name" name="name" required placeholder="e.g., Rosa Alteration">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details & Goals</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your current website and what you're looking to build..."></textarea>
+                        </div>
+                        <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+                        
+                        <button type="submit" class="btn consultation-btn">Send Request &rarr;</button>
+                    </form>
                 </div>
             </div>
         </section>
