@@ -1,15 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Hale | Web Designer & Digital Strategist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">Nathan Hale.</h1>
+            <h2 class="hero-subtitle">Crafting scalable, zero-friction digital experiences for local businesses and startups.</h2>
+            <div class="hero-links">
+                <a href="#projects" class="btn">View Work</a>
+                <a href="#consultation" class="btn btn-outline">Request Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="about" class="section container fade-in">
+            <div class="about-grid">
+                <div>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                <div>
+                    <p class="about-text">I don't just design websites that look good; I build digital infrastructure engineered for growth. As the founder of CampusShare and a digital strategist who has scaled audiences to over 30,000 followers and 1.4 million likes, I understand what drives user engagement.</p>
+                    <p class="about-text">My approach blends clean, minimalist UI with fast, scalable architecture. Whether it's a booking platform for a local barbershop or a secure peer-to-peer marketplace, I focus on building high-conversion, intuitive platforms that remove friction between businesses and their customers.</p>
+                </div>
+            </div>
         </section>
 
         <hr class="divider container">
 
         <section id="projects" class="section container">
             <h2 class="section-title">Selected Projects</h2>
-            <p class="section-description">Recent deployments focused on clean UI and scalable web architecture. You must provide the corresponding image files in your repository for previews to load.</p>
+            <p class="section-description">Recent deployments focused on clean UI and scalable web architecture.</p>
             
             <div class="portfolio-grid">
                 
                 <div class="portfolio-card">
-                    <img src="campusshare.png" alt="CampusShare Live Preview" class="project-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x250?text=campusshare.png+Not+Found';">
+                    <img src="campusshare.png" alt="CampusShare Live Preview" class="project-image">
                     <div class="card-content">
                         <h3>CampusShare <span class="badge">Founder</span></h3>
                         <p>Designed and deployed a peer-to-peer rental marketplace. Developed the MVP and UI architecture to segment listings by institution using secure domain authentication.</p>
@@ -18,7 +54,7 @@
                 </div>
 
                 <div class="portfolio-card">
-                    <img src="rosatailor.png" alt="Rosa Alteration Live Preview" class="project-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x250?text=rosatailor.png+Not+Found';">
+                    <img src="rosatailor.png" alt="Rosa Alteration Live Preview" class="project-image">
                     <div class="card-content">
                         <h3>Rosa Alteration</h3>
                         <p>A refined digital storefront built to enhance online visibility and streamline customer inquiries for a boutique tailoring business.</p>
@@ -27,7 +63,7 @@
                 </div>
 
                 <div class="portfolio-card">
-                    <img src="cindybarber.png" alt="Cindy's Barbershop Live Preview" class="project-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x250?text=cindybarber.png+Not+Found';">
+                    <img src="cindybarber.png" alt="Cindy's Barbershop Live Preview" class="project-image">
                     <div class="card-content">
                         <h3>Cindy's Barbershop</h3>
                         <p>A clean, service-oriented web presence designed to showcase services, integrate booking flows, and establish a modern brand identity.</p>
@@ -36,7 +72,7 @@
                 </div>
 
                 <div class="portfolio-card">
-                    <img src="twojays.png" alt="Two J's Live Preview" class="project-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x250?text=twojays.png+Not+Found';">
+                    <img src="twojays.png" alt="Two J's Live Preview" class="project-image">
                     <div class="card-content">
                         <h3>Two J's</h3>
                         <p>A scalable static-site framework deployed for local retail, focusing on fast load times, mobile responsiveness, and high-converting UI.</p>
@@ -96,7 +132,7 @@
                     <p class="about-text">Ready to overhaul your digital infrastructure or launch a new scalable platform? Fill out the form to initiate a conversation about your project goals and current web presence.</p>
                 </div>
                 <div>
-                    <form action="https://formspree.io/f/YOUR_ENDPOINT_HERE" method="POST" class="consultation-form">
+                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" class="consultation-form">
                         <div class="form-group">
                             <label for="name">Name / Business Name</label>
                             <input type="text" id="name" name="name" required placeholder="e.g., Rosa Alteration">
@@ -109,8 +145,6 @@
                             <label for="message">Project Details & Goals</label>
                             <textarea id="message" name="message" rows="5" required placeholder="Tell me about your current website and what you're looking to build..."></textarea>
                         </div>
-                        <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
-                        
                         <button type="submit" class="btn consultation-btn">Send Request &rarr;</button>
                     </form>
                 </div>
@@ -124,6 +158,7 @@
             <h2>Let's build something.</h2>
             <div class="footer-contact">
                 <a href="mailto:n.hale@bowdoin.edu">n.hale@bowdoin.edu</a> | 
+                <a href="tel:6165607270">(616) 560-7270</a> | 
                 <a href="https://www.linkedin.com/in/nathanstormhale/" target="_blank">LinkedIn</a>
             </div>
             <p class="copyright">&copy; 2026 Nathan Hale. All rights reserved.</p>
