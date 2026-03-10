@@ -146,7 +146,7 @@ a:hover {
     max-width: 600px;
 }
 
-/* About Grid */
+/* About Grid & General Grid Layouts */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -182,41 +182,33 @@ a:hover {
     border-color: var(--accent-gold);
 }
 
-/* Iframe Live Previews */
-.iframe-wrapper {
+/* Project Images - Applied to all project previews now */
+.project-image {
     width: 100%;
-    height: 250px; /* Height of the preview area */
-    overflow: hidden;
-    position: relative;
+    height: 250px;
+    object-fit: cover;
     border-bottom: 1px solid var(--border-color);
-    background-color: #f4f4f4; /* Placeholder color while loading */
+    transition: transform 0.5s ease;
 }
 
-.iframe-wrapper iframe {
-    /* Force a desktop-sized viewport */
-    width: 1200px;
-    height: 800px;
-    
-    /* Scale it down to fit inside the wrapper */
-    transform: scale(0.333);
-    transform-origin: top left;
-    
-    border: none;
-    
-    /* Prevents users from accidentally interacting with the mini-site while scrolling */
-    pointer-events: none; 
-}
-
-/* Hover effect for the whole card to make the iframe 'pop' slightly */
-.portfolio-card:hover .iframe-wrapper iframe {
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
+.portfolio-card:hover .project-image {
+    transform: scale(1.03);
 }
 
 .card-content {
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-content p {
+    margin-bottom: 2rem;
     flex-grow: 1;
 }
 
@@ -236,10 +228,6 @@ a:hover {
     padding-left: 5px;
 }
 
-.highlight-border {
-    border-top: 4px solid var(--accent-gold);
-}
-
 .badge {
     background: var(--accent-slate);
     color: white;
@@ -253,66 +241,6 @@ a:hover {
     font-weight: normal;
 }
 
-/* Divider */
-.divider {
-    border: 0;
-    height: 1px;
-    background: var(--border-color);
-    margin: 0 auto;
-}
-
-/* Footer */
-footer {
-    background-color: #fafafa;
-    border-top: 1px solid var(--border-color);
-    padding: 5rem 0;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-footer h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2.5rem;
-}
-
-.footer-contact {
-    margin-bottom: 1rem;
-}
-
-.footer-contact a {
-    margin: 0 0.5rem;
-    font-size: 1.1rem;
-}
-
-.copyright {
-    font-size: 0.9rem;
-    color: var(--accent-slate);
-    margin-top: 2rem;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .hero {
-        padding: 5rem 0 3rem;
-    }
-    
-    .hero-title {
-        font-size: 3rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-}
 /* Pricing Section */
 .pricing-grid {
     display: grid;
@@ -393,6 +321,7 @@ footer h2 {
     position: relative;
     margin-bottom: 1rem;
     color: var(--text-primary);
+    font-size: 0.9rem;
 }
 
 .features-list li::before {
@@ -409,10 +338,79 @@ footer h2 {
     margin-top: auto;
 }
 
-/* Ensure images match iframe wrapper dimensions */
-.project-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-bottom: 1px solid var(--border-color);
+/* Consultation Section Styles */
+.consultation-section {
+    padding-bottom: 7rem;
+}
+
+.consultation-btn {
+    margin-top: 1rem;
+}
+
+/* Divider */
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: #fafafa;
+    border-top: 1px solid var(--border-color);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.footer-contact {
+    margin-bottom: 1rem;
+}
+
+.footer-contact a {
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--accent-slate);
+    margin-top: 2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        padding: 5rem 0 3rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
 }
